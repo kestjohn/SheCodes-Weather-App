@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes Week 4 Homework</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/8ceb7860ca.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <div class="search">
+          <form id="enter-city">
+            <input type="text" placeholder="Enter a city" id="search-button" />
+            <input type="submit" value="search" />
+          </form>
+          <div>
+            <div class="col-6">
+              <button class="button" id="current-button">Current City</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data">
+        <ul>
+          <li id="city" class="capitalize">Mesa</li>
+          <li id="time" class="current-time">Friday: 8:30</li>
+        </ul>
+
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-4 today-temperature">
+              <span id="emoji">🌫 </span>
+              <span id="number">93</span>
+
+              <a href="#" class="unitF" id="fahrenheit"> °F | </a>
+              <a href="#" class="unitC" id="celcius"> °C</a>
+            </div>
+          </div>
+          <br />
+          <div class="col-4 weather" id="weather-description">
+            <strong>Smoke</strong>
+          </div>
+          <div class="col-4 humidity" id="weather-humidity">
+            <em>Humidity:11%</em>
+          </div>
+          <div class="col-4 wind" id="weather-wind">
+            <em>Wind: 10mph</em>
+          </div>
+        </div>
+
+        <div class="forecast">
+          <div class="row m-5">
+            <div class="col-1">
+              <span class="day"> Fri </span>
+              <p class="weather-icon">☁</p>
+              <p class="temperature"><strong>93°</strong> 73°</p>
+            </div>
+            <div class="col-1">
+              <span class="day"> Sat </span>
+              <p class="weather-icon">☁</p>
+              <p class="temperature"><strong>97°</strong> 74°</p>
+            </div>
+            <div class="col-1">
+              <span class="day"> Sun </span>
+              <p class="weather-icon">☀</p>
+              <p class="temperature"><strong>97°</strong> 74°</p>
+            </div>
+            <div class="col-1">
+              <span class="day"> Mon </span>
+              <p class="weather-icon">☀</p>
+              <p class="temperature"><strong>90°</strong> 73°</p>
+            </div>
+            <div class="col-1">
+              <span class="day"> Tue </span>
+              <p class="weather-icon">☀</p>
+              <p class="temperature"><strong>88°</strong> 69°</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
