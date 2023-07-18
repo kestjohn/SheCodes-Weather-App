@@ -30,83 +30,111 @@
             <input type="text" placeholder="Enter a city" id="search-button" />
             <input type="submit" value="search" />
           </form>
-          <div>
-            <div class="col-6">
-              <button class="button" id="current-button">Current City</button>
-            </div>
-          </div>
         </div>
       </div>
 
       <div class="data">
-        <ul>
-          <li id="city" class="capitalize">Mesa</li>
-          <li id="time" class="current-time">Friday: 8:30</li>
-        </ul>
+        <div class="row">
+          <div class="col-6">
+            <ul>
+              <li id="city" class="capitalize">Mesa, AZ</li>
+              <li id="time" class="current-time">Friday: 8:30</li>
+            </ul>
 
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-4 today-temperature">
-              <span id="emoji">🌫 </span>
-              <span id="number">93</span>
+            <div class="container text-center">
+              <div class="row">
+                <div class="col-4 today-temperature">
+                  <span class="weatherImage">
+                    <img
+                      src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                      alt="clear"
+                    />
+                  </span>
+                  <span id="number">93</span>
 
-              <a href="#" class="unitF" id="fahrenheit"> °F | </a>
-              <a href="#" class="unitC" id="celcius"> °C</a>
+                  <a href="#" class="unitF" id="fahrenheit"> °F | </a>
+                  <a href="#" class="unitC" id="celcius"> °C</a>
+                </div>
+              </div>
             </div>
           </div>
           <br />
-          <div class="col-4 weather" id="weather-description">
-            <strong>Smoke</strong>
-          </div>
-          <div class="col-4 humidity" id="weather-humidity">
-            <em>Humidity:11%</em>
-          </div>
-          <div class="col-4 wind" id="weather-wind">
-            <em>Wind: 10mph</em>
+
+          <div class="col-6 weather" id="weather-description">
+            <strong>Clear</strong>
+            <div class="col-6 humidity" id="weather-humidity">
+              <em>Humidity:11%</em>
+
+              <div class="col-6 wind" id="weather-wind">
+                <em>Wind: 10mph</em>
+              </div>
+            </div>
           </div>
         </div>
+        <br />
+        <div class="WeatherForecast row">
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-day">Fri</div>
+              <p class="weather-icon">☁</p>
+              <div class="forecast-temperature">
+                <span class="temp-max">110°</span>
+                <span class="temp-min">89°</span>
+              </div>
+            </div>
+          </div>
 
-        <div class="forecast">
-          <div class="row m-5">
-            <div class="col-1">
-              <span class="day"> Fri </span>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-day">Sat</div>
               <p class="weather-icon">☁</p>
-              <p class="temperature"><strong>93°</strong> 73°</p>
+              <div class="forecast-temperature">
+                <span class="temp-max">118°</span>
+                <span class="temp-min">92°</span>
+              </div>
             </div>
-            <div class="col-1">
-              <span class="day"> Sat </span>
-              <p class="weather-icon">☁</p>
-              <p class="temperature"><strong>97°</strong> 74°</p>
-            </div>
-            <div class="col-1">
-              <span class="day"> Sun </span>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-day">Sun</div>
               <p class="weather-icon">☀</p>
-              <p class="temperature"><strong>97°</strong> 74°</p>
+              <div class="forecast-temperature">
+                <span class="temp-max">116°</span>
+                <span class="temp-min">91°</span>
+              </div>
             </div>
-            <div class="col-1">
-              <span class="day"> Mon </span>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-day">Mon</div>
               <p class="weather-icon">☀</p>
-              <p class="temperature"><strong>90°</strong> 73°</p>
+              <div class="forecast-temperature">
+                <span class="temp-max">115°</span>
+                <span class="temp-min">90°</span>
+              </div>
             </div>
-            <div class="col-1">
-              <span class="day"> Tue </span>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-day">Tue</div>
+
               <p class="weather-icon">☀</p>
-              <p class="temperature"><strong>88°</strong> 69°</p>
+              <div class="forecast-temperature">
+                <span class="temp-max">112°</span>
+                <span class="temp-min">89°</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <p>
-      <small>
-        <a
-          href="https://github.com/kestjohn/SheCodes-Weather-App"
-          target="_blank"
-          >Open-source Code</a
-        >
-        by, Krissi St John
-      </small>
-    </p>
+    <footer>
+      <a href="https://github.com/kestjohn/SheCodes-Weather-App" target="_blank"
+        >Open-source Code</a
+      >
+      by, Krissi St John
+    </footer>
   </body>
+
   <script src="index.js"></script>
 </html>
