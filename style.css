@@ -33,7 +33,6 @@ li {
 }
 
 .weather-app {
-  border: 1px solid #dadde1;
   padding: 5px;
   margin: 10px;
 }
@@ -41,6 +40,7 @@ li {
   border: 1px solid black;
   padding: 15px 15px 15px 15px;
   margin: 20px;
+  max-width: 800pxS;
   background-image: linear-gradient(to top, #f7c3f8 0%, #b5f0f6 100%);
 }
 
