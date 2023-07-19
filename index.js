@@ -59,3 +59,14 @@ function searchPosition(event) {
 
 let searchBar = document.querySelector("#enter-city");
 searchBar.addEventListener("submit", searchPosition);
+
+function displayCeclius(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#number");
+  let celciusTemp = ((currentTemp.innerHTML - 32) * 5) / 9;
+  currentTemp.innerHTML = Math.round(celciusTemp);
+}
+
+let fahrenheitTemp = null;
+let celcius = document.querySelector("#celcius");
+celcius.addEventListener("click", displayCeclius);
