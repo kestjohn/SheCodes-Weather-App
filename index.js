@@ -40,6 +40,12 @@ function showTemp(response) {
   let windSpeed = Math.round(response.data.wind.speed);
   let windMiles = document.querySelector("#weather-wind");
   windMiles.innerHTML = `Wind: ${windSpeed}mph`;
+
+  let weatherIcon = document.querySelector("#icon");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchPosition(event) {
