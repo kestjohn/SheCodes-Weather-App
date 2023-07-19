@@ -53,19 +53,3 @@ function searchPosition(event) {
 
 let searchBar = document.querySelector("#enter-city");
 searchBar.addEventListener("submit", searchPosition);
-
-function displayCurrentPosition(position) {
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiKey = "a6244f5636e152e1c98a09dc4d66a96a";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
-  axios.get(apiUrl).then(showTemp);
-}
-
-function getCurrentPosition(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(displayCurrentPosition);
-}
-
-let CurrentButton = document.querySelector("#current-button");
-CurrentButton.addEventListener("click", getCurrentPosition);
