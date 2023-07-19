@@ -21,6 +21,7 @@ li {
 .humidity {
   font-style: italic;
   font-weight: normal;
+  color: #138edb;
 }
 
 .wind {
@@ -30,6 +31,7 @@ li {
 .city {
   color: black;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .weather-app {
@@ -41,6 +43,7 @@ li {
   padding: 15px 15px 15px 15px;
   margin: 20px;
   max-width: 800px;
+  border-radius: 5px;
   background-image: linear-gradient(to top, #f7c3f8 0%, #b5f0f6 100%);
 }
 
@@ -77,5 +80,9 @@ li {
   font-size: 40px;
 }
 .weather-info {
+  text-align: center;
+}
+
+footer {
   text-align: center;
 }
