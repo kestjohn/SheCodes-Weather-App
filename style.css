@@ -47,16 +47,20 @@ li {
   background-image: linear-gradient(to top, #f7c3f8 0%, #b5f0f6 100%);
 }
 
+
 .unitF {
   position: relative;
   top: -20px;
   font-size: medium;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .unitC {
   position: relative;
   top: -20px;
   font-size: medium;
+  text-decoration: none;
 }
 .forecast {
   border: 1px solid black;
