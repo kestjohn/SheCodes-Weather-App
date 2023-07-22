@@ -64,6 +64,8 @@ searchBar.addEventListener("submit", searchPosition);
 function displayCeclius(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#number");
+  celcius.classList.add("units-active");
+  fahrenheit.classList.remove("units-active");
   let celciusTemp = ((fahrenheitTemp - 32) * 5) / 9;
   currentTemp.innerHTML = Math.round(celciusTemp);
 }
@@ -71,6 +73,8 @@ function displayCeclius(event) {
 function displayFahrenheit(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#number");
+  celcius.classList.remove("units-active");
+  fahrenheit.classList.add("units-active");
   currentTemp.innerHTML = Math.round(fahrenheitTemp);
 }
 let fahrenheitTemp = null;

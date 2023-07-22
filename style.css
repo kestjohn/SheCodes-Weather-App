@@ -38,6 +38,7 @@ li {
   padding: 5px;
   margin: 10px;
 }
+
 .data {
   border: 1px solid black;
   padding: 15px 15px 15px 15px;
@@ -46,11 +47,27 @@ li {
   border-radius: 5px;
   background-image: linear-gradient(to top, #f7c3f8 0%, #b5f0f6 100%);
 }
-
-.units {
+a {
   position: relative;
   top: -20px;
   font-size: medium;
+  text-decoration: none;
+}
+
+.units-active {
+  color: black;
+  cursor: default;
+}
+.units-active:hover {
+  cursor: default;
+  text-decoration: none;
+}
+
+.units {
+  cursor: default;
+}
+.units:hover {
+  cursor: default;
   text-decoration: none;
 }
 
@@ -82,3 +99,4 @@ li {
 footer {
   text-align: center;
 }
+
