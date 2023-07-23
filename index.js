@@ -51,12 +51,19 @@ function showTemp(response) {
 
 function searchPosition(event) {
   event.preventDefault();
-  let searchInput = document.querySelector("#search-button");
+  let searchInput = document.querySelector("#search-button").value;
+
+  searchCity(searchInput);
+}
+
+function searchCity(city) {
   let apiKey = "a6244f5636e152e1c98a09dc4d66a96a";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(showTemp);
 }
+
+searchCity("Mesa");
 
 let searchBar = document.querySelector("#enter-city");
 searchBar.addEventListener("submit", searchPosition);
