@@ -71,31 +71,32 @@ a {
   text-decoration: none;
 }
 
-.forecast {
-  border: 1px solid black;
-  padding: 15px;
-  margin: 20px;
-}
-.day {
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 20px;
-}
-
 .weather-icon {
   font-size: 50px;
 }
-.temperature {
-  padding: 5px;
-}
+
 .today-temperature {
   color: #138edb;
   font-size: 40px;
 }
-.weather-info {
+
+.weatherForecast {
+  padding: 20px;
   text-align: center;
+  color: #0b283b;
 }
 
+.weatherDay {
+  font-size: 16px;
+  color: #0b283b;
+}
+.max-temp {
+  font-weight: bold;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
 footer {
   text-align: center;
 }
