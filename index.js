@@ -22,6 +22,31 @@ let days = [
 
 date.innerHTML = `${days[day]}: ${hours}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+     <div class="col-2">
+              <div class="weatherDay">${day}</div>
+              <img
+                src="https://openweathermap.org/img/wn/01d@2x.png"
+                alt=""
+                width="75"
+              />
+              <div class="weather-forecast-temperatures">
+                <span class="max-temp">113°</span>
+                <span class="min-temp">87°</span>
+              </div>
+            </div> `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemp(response) {
   let temp = Math.round(response.data.main.temp);
   let city = document.querySelector("#city");
@@ -64,6 +89,7 @@ function searchCity(city) {
 }
 
 searchCity("Mesa");
+displayForecast();
 
 let searchBar = document.querySelector("#enter-city");
 searchBar.addEventListener("submit", searchPosition);
