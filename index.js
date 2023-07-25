@@ -113,7 +113,7 @@ function searchCity(city) {
 }
 
 searchCity("Mesa");
-displayForecast();
+
 
 let searchBar = document.querySelector("#enter-city");
 searchBar.addEventListener("submit", searchPosition);
