@@ -25,7 +25,7 @@ date.innerHTML = `${days[day]}: ${hours}:${minutes}`;
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   return days[day];
 }
@@ -40,10 +40,10 @@ function displayForecast(response) {
         forecastHTML +
         `
      <div class="col-2">
-              <div class="weatherDay">${formatDay(forecastDay.dt)}</div>
+              <div class="weatherDay">${formatDay(forecastDay.dt * 1000)}</div>
               <img
                 src="https://openweathermap.org/img/wn/${
-                  forecastDay.weather[0]
+                  forecastDay.weather[0].icon
                 }@2x.png"
                 alt=""
                 width="75"
@@ -65,7 +65,7 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  let apiKey = "a6244f5636e152e1c98a09dc4d66a96a";
+  let apiKey = "203fa770242fcd2b9555d832a88ea567";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
 }
@@ -113,7 +113,6 @@ function searchCity(city) {
 }
 
 searchCity("Mesa");
-
 
 let searchBar = document.querySelector("#enter-city");
 searchBar.addEventListener("submit", searchPosition);
