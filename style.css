@@ -2,26 +2,31 @@ li {
   line-height: 30px;
   list-style: none;
   font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .capitalize {
   text-transform: capitalize;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .current-time {
   font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .weather {
   text-transform: capitalize;
   font-weight: bold;
   padding: 2px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .humidity {
   font-style: italic;
   font-weight: normal;
   color: #138edb;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .wind {
@@ -41,11 +46,12 @@ li {
 
 .data {
   border: 1px solid black;
+  box-shadow: 2px 2px 2px rgb(123, 122, 122);
   padding: 15px 15px 15px 15px;
   margin: 20px;
   max-width: 800px;
   border-radius: 5px;
-  background-image: linear-gradient(to top, #f7c3f8 0%, #b5f0f6 100%);
+  background-image: linear-gradient(to top, #b495e9 0%, #b9eefa 100%);
 }
 
 .units-active {
@@ -91,6 +97,7 @@ li {
 .weatherDay {
   font-size: 16px;
   color: #0b283b;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .max-temp {
   font-weight: bold;
@@ -102,6 +109,8 @@ li {
 footer {
   font-weight: bold;
   margin-left: 330px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 a {
