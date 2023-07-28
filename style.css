@@ -54,28 +54,11 @@ li {
   background-image: linear-gradient(to top, #b495e9 0%, #b9eefa 100%);
 }
 
-.units-active {
-  color: black;
-  cursor: default;
-  position: relative;
-  top: -20px;
-  font-size: medium;
-  text-decoration: none;
-}
-.units-active:hover {
-  cursor: default;
-  text-decoration: none;
-}
-
 .units {
-  cursor: default;
+  color: black;
   position: relative;
-  top: -20px;
-  font-size: medium;
-  text-decoration: none;
-}
-.units:hover {
-  cursor: default;
+  top: -15px;
+  font-size: 18px;
   text-decoration: none;
 }
 

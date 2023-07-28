@@ -116,27 +116,3 @@ searchCity("Mesa");
 
 let searchBar = document.querySelector("#enter-city");
 searchBar.addEventListener("submit", searchPosition);
-
-function displayCeclius(event) {
-  event.preventDefault();
-  let currentTemp = document.querySelector("#number");
-  celcius.classList.add("units-active");
-  fahrenheit.classList.remove("units-active");
-  let celciusTemp = ((fahrenheitTemp - 32) * 5) / 9;
-  currentTemp.innerHTML = Math.round(celciusTemp);
-}
-
-function displayFahrenheit(event) {
-  event.preventDefault();
-  let currentTemp = document.querySelector("#number");
-  celcius.classList.remove("units-active");
-  fahrenheit.classList.add("units-active");
-  currentTemp.innerHTML = Math.round(fahrenheitTemp);
-}
-let fahrenheitTemp = null;
-let celcius = document.querySelector("#celcius");
-celcius.addEventListener("click", displayCeclius);
-
-let celciusTemp = null;
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", displayFahrenheit);
