@@ -108,7 +108,15 @@ function searchPosition(event) {
 function searchCity(city) {
   let apiKey = "a6244f5636e152e1c98a09dc4d66a96a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-
+  fetch(apiUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Please enter a valid city.");
+      }
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
   axios.get(apiUrl).then(showTemp);
 }
 
@@ -116,3 +124,27 @@ searchCity("Mesa");
 
 let searchBar = document.querySelector("#enter-city");
 searchBar.addEventListener("submit", searchPosition);
+
+function displayCeclius(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#number");
+  celcius.classList.add("units-active");
+  fahrenheit.classList.remove("units-active");
+  let celciusTemp = ((fahrenheitTemp - 32) * 5) / 9;
+  currentTemp.innerHTML = Math.round(celciusTemp);
+}
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#number");
+  celcius.classList.remove("units-active");
+  fahrenheit.classList.add("units-active");
+  currentTemp.innerHTML = Math.round(fahrenheitTemp);
+}
+let fahrenheitTemp = null;
+let celcius = document.querySelector("#celcius");
+celcius.addEventListener("click", displayCeclius);
+
+let celciusTemp = null;
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", displayFahrenheit);
